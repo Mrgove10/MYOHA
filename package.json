@@ -1,0 +1,20 @@
+{
+  "name": "MYOHA",
+  "version": "1.0.0",
+  "description": "Make Your Own Home Assistant",
+  "repository": {
+    "url": "https://github.com/Mrgove10/MYOHA"
+  },
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrien R",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-aplay": "^1.0.3",
+    "say": "^0.16.0",
+    "sonus": "^1.0.3"
+  }
+}
