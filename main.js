@@ -1,3 +1,4 @@
+require('dotenv').config()
 const Sonus = require('sonus')
 const speech = require('@google-cloud/speech')
 const client = new speech.SpeechClient({
@@ -6,17 +7,18 @@ const client = new speech.SpeechClient({
 })
 const hotwords = [{ file: 'Hey Google.pmdl', hotword: 'Hey Google' }]
 const detector = Sonus.init({ hotwords }, client)
-const Sound = require('node-aplay');
+const sounds = require('./sounds')
 const say = require('say');
+
+if (process.env.INITIAL_CREDITS_SST >= 240) {
+   console.log("no more credits remaining")
+}
 Sonus.start(detector)
 console.log('Running !')
+console.log('Waiting for hotword !')
 detector.on('hotword', function (index, hotword, buffer) {
    console.log('hotword', index, hotword);
-   var music = new Sound('fire.wav');
-   music.play();
-   music.on('complete', () => {
-      console.log('Done with playback!');
-   });
+   sounds.playActivationSound();
 });
 
 detector.on('silence', function () {
