@@ -12,7 +12,7 @@ If you are of with no limite you can set it in the prrameters
 # MOYHA #ENGLISH
 
 
-Google cloud platforms allows audio clips upto 60 Minutes for free. 
+Google cloud platforms allow audio clips upto 60 Minutes for free. 
 Each audio clip is rounded up to 15 seconds.
 60 minutes =  3600 seconds / 15 seconds = 240 Recognitions per month.
 
